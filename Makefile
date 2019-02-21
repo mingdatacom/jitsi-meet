@@ -72,7 +72,7 @@ deploy-local:
 	([ ! -x deploy-local.sh ] || ./deploy-local.sh)
 
 dev: deploy-init deploy-css deploy-lib-jitsi-meet deploy-libflac
-	$(WEBPACK_DEV_SERVER)
+	$(WEBPACK_DEV_SERVER) --host 0.0.0.0
 
 source-package:
 	mkdir -p source_package/jitsi-meet/css && \
